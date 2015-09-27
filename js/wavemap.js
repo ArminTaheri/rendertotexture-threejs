@@ -6,9 +6,9 @@ function WaveMap() {
     var renderer;
     
     
-	var screenQuad;
-	var screenMat;
-	var outt
+    var screenQuad;
+    var screenMat;
+    var outt
 	
     
     var init = function () {

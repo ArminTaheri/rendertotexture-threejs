@@ -1,12 +1,12 @@
 function Application () {
     var scene;
-	var camera;
-	var renderer;
-
+    var camera;
+    var renderer;
+    
     var wavemap;
     
     var waveMat;
-	var wavePlane;
+    var wavePlane;
 	
 	var light;
     var init = function () {
