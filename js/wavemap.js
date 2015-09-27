@@ -16,12 +16,14 @@ function WaveMap() {
         camera = new THREE.OrthographicCamera( 1 / - 2, 1 / 2, 1 / 2, 1 / - 2, 1, 1000 );
         rtTexture = new THREE.WebGLRenderTarget(512,512, {format: THREE.RGBFormat});
         renderer = new THREE.WebGLRenderer();
+        
         scene.add(camera);
         
         screenMat = new THREE.ShaderMaterial({
             vertexShader: document.getElementById( 'hfVert' ).textContent,
             fragmentShader: document.getElementById( 'hfFrag' ).textContent
         });
+        
         screenQuad = new THREE.Mesh( new THREE.PlaneGeometry( 1, 1, 1, 1 ), screenMat );
         scene.add(screenQuad);
         

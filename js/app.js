@@ -8,7 +8,6 @@ function Application () {
     var waveMat;
     var wavePlane;
 	
-	var light;
     var init = function () {
         scene = new THREE.Scene();
         camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -28,7 +27,7 @@ function Application () {
             {
                 color: {type: 'f', value: 1.0},
                 heightMul: {type: 'f', value: 1.0},
-                heightmap: {type: 't', value: wavemap.getNextWaveMap()}
+                heightmap: {type: 't', value: wavemap.getWaveMaterial()}
             }
         ]),
         vertexShader: document.getElementById('waveVert').text,
@@ -39,10 +38,6 @@ function Application () {
         
         wavePlane = new THREE.Mesh(new THREE.PlaneGeometry(6,6,64,64), wavemap.getWaveMaterial());
         scene.add(wavePlane);
-        
-        light = new THREE.PointLight(0xffffff, 1, 100);
-        light.position.set(0,2,-1);
-        scene.add(light);
         
         camera.position.z = 6;
         //camera.position.y = 5;

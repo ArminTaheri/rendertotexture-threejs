@@ -72,6 +72,7 @@ canvas { display:block; } /* To remove the scrollbars */
 	}
 </script>
 
+<!--
 <script id="waveVert" type="x-shader/x-vertex">
 	uniform sampler2D heightmap;
 	uniform float heightMul;
@@ -121,16 +122,11 @@ canvas { display:block; } /* To remove the scrollbars */
 	    gl_FragColor = vec4(1.0,1.0,1.0,1.0) * addedLights;
 	}
 </script>
+!-->
 </head>
 
 <body>
 	<script>
-		scene = new THREE.Scene();
-		clearScene = function () {
-			for( var i = scene.children.length - 1; i >= 0; i--) {
-				scene.remove(scene.children[i]);
-			}
-		}
 		var app = Application();
 		app.run();
 	</script>
